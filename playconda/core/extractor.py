@@ -48,4 +48,3 @@ def app_dicts_for_text(text):
         app_dict = app_dict_for_card(card)
         app_dicts.append(app_dict)
     return app_dicts
-
