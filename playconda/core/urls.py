@@ -19,5 +19,5 @@ from playconda.core.views import index, search, details
 urlpatterns = [
     url(r'^$', index, name="index"),
     url(r'^search$', search, name="search"),
-    url(r'^details$', details, name="details"),
+    url(r'^details/(?P<app_id>.+)$', details, name="details"),
 ]

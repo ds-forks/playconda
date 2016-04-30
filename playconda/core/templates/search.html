@@ -5,5 +5,12 @@ Search - {{text}}
 {% endblock %}
 
 {% block content %}
-<h2>{{text}}</h2>
+<h2>{{term.text}}</h2>
+<ul>
+	{% for app in term.apps.all %}
+	<li>
+		<a href="{% url 'details' app_id=app.app_id %}?text={{term.text}}">{{app.app_name}}</a>
+	</li>
+	{% endfor %}
+</ul>
 {% endblock %}

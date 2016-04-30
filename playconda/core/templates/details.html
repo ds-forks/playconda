@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}
+Details - {{app.app_name}}
+{% endblock %}
+
+{% block content %}
+<h4><a href="{% url 'search' %}?text={{text}}">Back</a></h4>
+<h2>{{app.app_name}}</h2>
+<img src="{{app.icon_url}}" alt="{{app.name}} Icon">
+<ul>
+	<li>
+		Id: <b>{{app.app_id}}</b>
+	</li>
+	<li>
+		Developer name: <b>{{app.developer_name}}</b>
+	</li>
+	<li>
+		Developer email: <b>{{app.developer_email}}</b>
+	</li>
+</ul>
+{% endblock %}
