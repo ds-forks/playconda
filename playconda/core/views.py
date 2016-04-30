@@ -36,7 +36,6 @@ def details(request, app_id):
     """
     text = request.GET.get("text").strip()
     app = get_app(app_id)
-    print(text)
     if text == "" or app is None:
         return redirect("index")
     context = dict(text=text, app=app)
