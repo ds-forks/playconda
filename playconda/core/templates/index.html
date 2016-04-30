@@ -3,5 +3,8 @@
 {% block title %}Index{% endblock %}
 
 {% block content %}
-Index content
+<form action="{% url 'search' %}" method="get">
+	First name: <input type="text" name="text"><br>
+	<input type="submit" value="Search">
+</form>
 {% endblock %}

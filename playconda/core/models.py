@@ -19,7 +19,7 @@ class App(Model):
     app_id = CharField(max_length=64, unique=True)
     app_name = CharField(max_length=256)
     developer_name = CharField(max_length=128)
-    developer_email = EmailField(max_length=128)
+    developer_email = EmailField(max_length=128, null=True)
     icon_url = URLField(max_length=256)
 
     def __str__(self):

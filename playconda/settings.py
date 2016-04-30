@@ -121,3 +121,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+
+PLAY_DOMAIN = "https://play.google.com"
+SEARCH_URL = PLAY_DOMAIN + "/store/search?q=%s&c=apps"

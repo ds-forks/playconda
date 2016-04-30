@@ -14,8 +14,10 @@ Date created: 2016-04-30
 
 from django.conf.urls import url
 
-from playconda.core.views import index
+from playconda.core.views import index, search, details
 
 urlpatterns = [
-    url(r'^$', index),
+    url(r'^$', index, name="index"),
+    url(r'^search$', search, name="search"),
+    url(r'^details$', details, name="details"),
 ]

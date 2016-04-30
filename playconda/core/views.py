@@ -1,6 +1,9 @@
 from django.shortcuts import render
 
 
+from playconda.core.extractor import app_dicts_for_text
+
+
 def index(request):
     """
     docstring for index
@@ -12,11 +15,15 @@ def search(request):
     """
     Search for a text
     """
-    return render(request, "search.html")
+    text = request.GET.get("text")
+    app_dicts = app_dicts_for_text(text)
+    print(app_dicts)
+    context = dict(text=text)
+    return render(request, "search.html", context)
 
 
-def detail(request, app_id):
+def details(request, app_id):
     """
     View details of an app
     """
-    return render(request, "detail.html")
+    return render(request, "details.html")
