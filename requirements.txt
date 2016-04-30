@@ -1,0 +1,5 @@
+cssselect==0.9.1
+Django==1.9.5
+lxml==3.6.0
+pyquery==1.2.13
+requests==2.10.0
